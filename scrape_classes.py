@@ -1,0 +1,8 @@
+parameters_class = "ooa-162vy3d e18eslyg3"
+parameter_class = "e18eslyg4 ooa-12b2ph5"
+parameter_value_text = "e16lfxpc0 ooa-1pe3502 er34gjf0"
+parameter_value_link = "e16lfxpc1 ooa-1ftbcn2"
+price_value = "offer-price__number e1mlrgts4 ooa-1jtct0k er34gjf0"
+features_section_id = "content-equipments-section"
+features_class = "e1ic0wg14 ooa-1i4y99d er34gjf0"
+offer_listing_class = "e1vic7eh9 ooa-1ed90th er34gjf0"
