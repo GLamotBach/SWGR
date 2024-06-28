@@ -1,6 +1,5 @@
 import scrape_classes
 from offer_id import extract_offer_id
-# from dataset_procesor import load_dictionaries
 import requests
 import pickle
 from datetime import date
@@ -12,7 +11,6 @@ def load_dictionaries():
     with open('dictionaries.pkl', 'rb') as f:
         load = pickle.load(f)
         return load
-# Pickle gubi polskie znaki
 
 
 def retrieve_offer(offer_id: str) -> list:
@@ -21,7 +19,6 @@ def retrieve_offer(offer_id: str) -> list:
     # scrape_offer() - should drop incomplete offers.
     # retrieve_offer() - must work even with incomplete offers.
     # Dumb default values for missing information - Most probable values for all cars in general.
-    # TODO: Implement a functionality that will assume probable default missing values based on the model of the car
 
     # Retrieving data from site
     url = "https://www.otomoto.pl/osobowe/oferta/" + offer_id + ".html"
@@ -271,19 +268,12 @@ def get_offer_data_url(offer_url: str) -> list:
 
 
 if __name__ == "__main__":
-    # offer_1 = "ID6Grb4z"
     offer_1 = "ID6GvnzN"
     offer_d = retrieve_offer(offer_1)
     used_offer_data = drop_unused_features(offer_d)
-    # used_offer_data[0] = 'Volkswagen Passat B5 FL (2000-2005)'
     transformed_data = transform_list_str_to_int(used_offer_data)
     print(offer_d)
     print(used_offer_data)
     print(transformed_data)
     print(f"Len: {len(transformed_data)}")
-    # dict = load_dictionaries()
-    # print(dict['drive_type'])
-    # print(dict['drive_type']['Na_przednie_koła'])
-    # print(dict['car_model'][used_offer_data[0]])
-    # print(dict['seats'])
     print(get_offer_data_url('https://www.otomoto.pl/osobowe/oferta/mercedes-benz-klasa-e-mercedes-w-124-500e-1991r-stan-igla-ID6Guynh.html'))

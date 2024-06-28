@@ -11,9 +11,9 @@ offer_url = input("otomoto.pl offer URL:\n")
 offer_data = get_offer_data_url(offer_url)
 offer_data_array = np.array(offer_data)
 
-# Zrobic predykcje na podstawie danych
+# Make a prediction based on acquired from otomoto.pl offer
 prediction = model.predict(offer_data_array)
 
-# Zwrócić predykcje
+# Return the prediction
 print(prediction)
 

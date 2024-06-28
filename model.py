@@ -18,10 +18,7 @@ def build_and_compile_model(norm):
 
 
 # Normalization
-# TODO: Dodać argument shape do normalizacji. Nie można załadować modelu jeżeli nie ma tego argumentu
-# shape=(19,) ???
 normalizer = tf.keras.layers.Normalization(axis=-1, input_shape=(19,))
-# TODO: Obczaić jak nie normalizować niektórych kolumn
 
 if __name__ == "__main__":
     # Importing data from csv file

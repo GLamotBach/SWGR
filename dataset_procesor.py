@@ -1,9 +1,6 @@
 import pandas as pd
 import pickle
 
-# TODO: Filter misssing values using .dropna() in a filtering function
-# TODO: Odfiltrować dzikie stringi
-
 
 def get_vocabulary(raw_data):
     """Constructing a set of dictionaries from the dataset, translating strings to integers."""
