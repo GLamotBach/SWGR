@@ -1,6 +1,7 @@
 .idea/
 __pycache__/
 venv/
-car_offers_otomoto.csv
-collected_offers.csv
+/car_offers_otomoto.csv
+/collected_offers.csv
+
 
