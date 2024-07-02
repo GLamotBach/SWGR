@@ -1,7 +1,10 @@
 import tkinter as tk
+import tkinter.font as tkFont
 from PIL import Image, ImageTk
 
 from user_interface import appraise_offer_approx
+
+# TODO: Make tensorflow more 'lean'
 
 
 def button_function():
@@ -13,6 +16,13 @@ def button_function():
 
 # Beginning of window object
 root = tk.Tk()
+
+
+root.title('SWGR - Wyceń wartość samochodu')
+icon = Image.open('swgr_icon.png')
+icon = ImageTk.PhotoImage(icon)
+root.iconphoto(False, icon)
+basic_font = tkFont.Font(family="Jost", weight=tkFont.BOLD)
 
 # Window size and grid shape
 canvas = tk.Canvas(root, width=600, height=300)
@@ -30,7 +40,7 @@ logo_label.grid(column=1, row=0)
 
 # Instructions
 message = "Podaj link do ogłoszenia z otomoto.pl które chcesz wycenić."
-message_lable = tk.Label(root, text=message, font="Raleway")
+message_lable = tk.Label(root, text=message, font=basic_font,)
 message_lable.grid(columnspan=3, column=0, row=1)
 
 # Entry box
@@ -43,7 +53,7 @@ appraise_text = tk.StringVar()
 appraise_btn = tk.Button(root,
                          textvariable=appraise_text,
                          command=button_function,
-                         font="Raleway",
+                         font=basic_font,
                          bg="#c2121b",
                          fg="white",
                          height=1,
