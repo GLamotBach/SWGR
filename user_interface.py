@@ -16,20 +16,7 @@ def appraise_offer_approx(offer_url):
     """Returns an approximated, appraised value of a car based on a URL of an otomoto.pl sale offer."""
     return int(round(appraise_offer(offer_url)))
 
-# # Load trained model
-# model = tf.keras.models.load_model('dnn_model.keras')
-#
-#
-# # Input data for prediction
-# offer_url = input("otomoto.pl offer URL:\n")
-# offer_data = get_offer_data_url(offer_url)
-# offer_data_array = np.array(offer_data)
-#
-# # Make a prediction based on acquired from otomoto.pl offer
-# prediction = model.predict(offer_data_array)
-#
-# # Return the prediction
-# print(prediction)
+
 if __name__ == "__main__":
     print(appraise_offer("https://www.otomoto.pl/osobowe/oferta/opel-corsa-opel-corsa-1-4-ID6Gvheg.html"))
     print(appraise_offer_approx("https://www.otomoto.pl/osobowe/oferta/opel-corsa-opel-corsa-1-4-ID6Gvheg.html"))
