@@ -8,8 +8,8 @@ from tensorflow.keras import layers
 def build_and_compile_model(norm):
     model = keras.Sequential([
         norm,
-        layers.Dense(64, activation='relu', input_shape=(19,)),
-        layers.Dense(64, activation='relu'),
+        layers.Dense(128, activation='relu', input_shape=(19,)),
+        layers.Dense(128, activation='relu'),
         layers.Dense(1)
     ])
 
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     history = dnn_model.fit(
         train_features,
         train_labels,
-        epochs=100,
+        epochs=200,
         verbose=1,
         validation_split=0.2)
 
