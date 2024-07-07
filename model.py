@@ -6,6 +6,7 @@ from tensorflow.keras import layers
 
 
 def build_and_compile_model(norm):
+    """Function that handles the creation and training of the model."""
     model = keras.Sequential([
         norm,
         layers.Dense(128, activation='relu', input_shape=(19,)),
@@ -13,7 +14,7 @@ def build_and_compile_model(norm):
         layers.Dense(1)
     ])
 
-    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.1), loss='mean_absolute_error')
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.01), loss='mean_absolute_error')
     return model
 
 
